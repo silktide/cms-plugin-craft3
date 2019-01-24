@@ -1,0 +1,38 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * Silktide Craft plugin for Craft CMS 3.x
+ *
+ * Silktide Craft _settings.twig
+ *
+ * @author    silktide
+ * @copyright Copyright (c) 2019 Silktide Ltd
+ * @link      https://www.silktide.com
+ * @package   craftsilktide
+ * @since     1.0.0
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{# Link for the ? icon at the bottom of the page #}
+{% set docsUrl = "https://github.com/silktide/craft-silktide/blob/master/README.md" %}
+
+{# The title of this CP section #}
+{% set title = "Silktide" %}
+
+{# The URL to this plugin's base CP section #}
+{% set pluginCpUrl = url('craft-silktide') %}
+
+    {{ forms.textField({
+        label:        'Please enter the API key provided by <a href="https://www.silktide.com">Silktide</a>.' | t('craft-silktide'),
+        class:        'required',
+        id:           'apiKey',
+        name:         'apiKey',
+        instructions:  'For guidance, please see the <a href="https://support.silktide.com/glossary/cms-install-craft3-guide/">Silktide Craft CMS installation guide</a>.' | t('craft-silktide'),
+        errors:       settings.getErrors('apiKey'),
+        size:          32,
+        maxlength:     32,
+        value:        settings['apiKey']
+    }) }}
+

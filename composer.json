@@ -1,0 +1,45 @@
+{
+    "name": "silktide/craft-silktide",
+    "description": "Integrate Silktide with Craft",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "silktide craft",
+        "silktide"
+    ],
+    "support": {
+        "docs": "https://github.com/silktide/cms-plugin-craft3/blob/master/README.md",
+        "issues": "https://github.com/silktide/cms-plugin-craft3/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "silktide",
+            "homepage": "https://www.silktide.com"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "ext-openssl": "*",
+        "ext-json": "*",
+        "craftcms/cms": "^3.0.0-RC1"
+    },
+    "autoload": {
+        "psr-4": {
+          "silktide\\craftsilktide\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Silktide",
+        "handle": "craft-silktide",
+        "hasCpSettings": true,
+        "hasSettings" : false,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/silktide/cms-plugin-craft3/master/CHANGELOG.md",
+        "class": "silktide\\craftsilktide\\CraftSilktide"
+    }
+}
