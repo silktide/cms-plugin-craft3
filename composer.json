@@ -1,6 +1,7 @@
 {
     "name": "silktide/craft-silktide",
     "description": "Integrate Silktide with Craft",
+    "version" : "1.0.3",
     "type": "craft-plugin",
     "keywords": [
         "craft",

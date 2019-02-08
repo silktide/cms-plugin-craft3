@@ -65,14 +65,13 @@ class CraftSilktideJob extends BaseJob
           ),
           __METHOD__
         );
-        $options = [
-          RequestOptions::BODY => http_build_query([
-            'apiKey' => $this->apiKey,
-            'urls' => [
-              $this->urls,
-            ],
-          ]),
-        ];
+        $requestBody = http_build_query([
+          'apiKey' => $this->apiKey,
+          'urls' => [
+            $this->urls,
+          ],
+        ]);
+        $options = [RequestOptions::BODY => $requestBody];
         $client = Craft::createGuzzleClient(
           [
             'headers' => [
@@ -83,14 +82,15 @@ class CraftSilktideJob extends BaseJob
         try {
             $response = $client->request('post', self::SILKTIDE_API_URL,
               $options);
-            $this->handleValidResponse($response);
+            $this->handleValidResponse($response, $requestBody);
         } catch (RequestException $e) {
             $message = Craft::t(
               'craft-silktide',
-              'Failed to notify Silktide - exception type {exception} message: {message}',
+              'Failed to notify Silktide - exception type {exception} message: {message} with request body {request}',
               [
                 'exception' => get_class($e),
                 'message' => $e->getMessage(),
+                'request' => $requestBody,
               ]
             );
             Craft::warning($message, __METHOD__);
@@ -102,11 +102,14 @@ class CraftSilktideJob extends BaseJob
 
     /**
      * @param \Psr\Http\Message\ResponseInterface $response
+     * @param string $requestBody
      *
      * @throws \yii\base\ErrorException
      */
-    protected function handleValidResponse(ResponseInterface $response)
-    {
+    protected function handleValidResponse(
+      ResponseInterface $response,
+      string $requestBody
+    ) {
         $responseCode = (int)$response->getStatusCode();
         $body = $response->getBody()->getContents();
         if ($responseCode >= 200 && $responseCode <= 299) {
@@ -114,10 +117,11 @@ class CraftSilktideJob extends BaseJob
             if (is_array($decoded) && isset($decoded['status']) && $decoded['status'] === 'ok') {
                 $message = Craft::t(
                   'craft-silktide',
-                  'Notified Silktide and received a {status} code back with {body}',
+                  'Notified Silktide and received a {status} code back with {body} from {request}',
                   [
                     'status' => $responseCode,
                     'body' => $body,
+                    'request' => $requestBody,
                   ]
                 );
                 Craft::info($message, __METHOD__);
@@ -125,10 +129,11 @@ class CraftSilktideJob extends BaseJob
         }
         $message = Craft::t(
           'craft-silktide',
-          'Failed to notify Silktide - HTTP request failed with status {status} and body {body}',
+          'Failed to notify Silktide - HTTP request failed with status {status} and body {body} from {request}',
           [
             'status' => $responseCode,
             'body' => $body,
+            'request' => $requestBody,
           ]
         );
         Craft::warning($message, __METHOD__);

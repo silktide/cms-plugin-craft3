@@ -5,7 +5,7 @@
  * Integrate Silktide with Craft
  *
  * @link      https://www.silktide.com
- * @copyright Copyright (c) 2019 silktide
+ * @copyright Copyright (c) 2019 Silktide Ltd.
  */
 
 namespace silktide\craftsilktide\models;
