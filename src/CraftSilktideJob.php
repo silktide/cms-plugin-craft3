@@ -26,9 +26,7 @@ class CraftSilktideJob extends BaseJob
 {
 
     const SILKTIDE_API_URL = 'https://api.silktide.com/cms/update';
-
-    //const SILKTIDE_API_URL = 'https://rbox.app/box/request/12cee683-394c-468e-a426-dc9219bf3c18';
-
+    
     /**
      * @var string The API key we are using.
      */
