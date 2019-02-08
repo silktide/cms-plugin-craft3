@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 1.0.5 - 2019.02-08
+## Fixed
+Removed version number in composer.json.
+
 ## 1.0.4 - 2019.02-08
 ## Fixed
 Even more logging data and error handling.
@@ -14,12 +18,12 @@ More logging data.
 
 ## 1.0.2 - 2019.02-08
 ## Fixed
-Version number in composer.json
+Version number in composer.json.
 
 ## 1.0.1 - 2019-02-08
 ## Fixed
-- Additional logs
+- Additional logs.
 
 ## 1.0.0 - 2019-01-24
 ### Added
-- Initial release
+- Initial release.
