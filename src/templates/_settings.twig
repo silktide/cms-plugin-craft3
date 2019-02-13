@@ -16,7 +16,7 @@
 {% import "_includes/forms" as forms %}
 
 {# Link for the ? icon at the bottom of the page #}
-{% set docsUrl = "https://github.com/silktide/craft-silktide/blob/master/README.md" %}
+{% set docsUrl = "https://support.silktide.com/guides/cms-install-craft3-guide/" %}
 
 {# The title of this CP section #}
 {% set title = "Silktide" %}
@@ -29,7 +29,7 @@
         class:        'required',
         id:           'apiKey',
         name:         'apiKey',
-        instructions:  'For guidance, please see the <a href="https://support.silktide.com/glossary/cms-install-craft3-guide/">Silktide Craft CMS installation guide</a>.' | t('craft-silktide'),
+        instructions:  'For guidance, please see the <a href="https://support.silktide.com/guides/cms-install-craft3-guide/">Silktide Craft CMS installation guide</a>.' | t('craft-silktide'),
         errors:       settings.getErrors('apiKey'),
         size:          32,
         maxlength:     32,

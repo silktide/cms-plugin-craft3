@@ -11,14 +11,19 @@
         "silktide"
     ],
     "support": {
-        "docs": "https://github.com/silktide/cms-plugin-craft3/blob/master/README.md",
-        "issues": "https://github.com/silktide/cms-plugin-craft3/issues"
+        "docs": "https://support.silktide.com/guides/cms-install-craft3-guide/",
+        "issues": "https://github.com/silktide/cms-plugin-craft3/issues",
+        "source": "https://github.com/silktide/cms-plugin-craft3/"
     },
     "license": "MIT",
     "authors": [
         {
-            "name": "silktide",
+            "name": "Silktide Ltd",
             "homepage": "https://www.silktide.com"
+        },
+        {
+            "name": "Richard Bairwell",
+            "homepage": "https://github.com/rbairwell"
         }
     ],
     "require": {
@@ -39,6 +44,8 @@
         "hasSettings" : false,
         "hasCpSection": false,
         "changelogUrl": "https://raw.githubusercontent.com/silktide/cms-plugin-craft3/master/CHANGELOG.md",
-        "class": "silktide\\craftsilktide\\CraftSilktide"
+        "class": "silktide\\craftsilktide\\CraftSilktide",
+        "developer": "Silktide Ltd",
+        "documentationUrl": "https://support.silktide.com/guides/cms-install-craft3-guide/"
     }
 }

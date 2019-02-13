@@ -26,6 +26,7 @@ To install the plugin, follow these instructions.
 
 4. Enter the API key as provided by Silktide.
 
+Further documentation is available on the [Silktide Craft3 Plugin installation guide](ttps://support.silktide.com/guides/cms-install-craft3-guide/).
 ## Silktide Craft Overview
 
 Enables Silktide to be notified of new and updated pages on your Craft CMS 3 powered website and for you to easily edit pages within Craft from Silktide.
@@ -38,4 +39,4 @@ Enables Silktide to be notified of new and updated pages on your Craft CMS 3 pow
 
 3. Provide your Silktide API key. This can be found in the 'Settings -> CMS' section of your Silktide account.
 
-Brought to you by [Silktide](https://www.silktide.com)
+Brought to you by [Silktide](https://www.silktide.com).

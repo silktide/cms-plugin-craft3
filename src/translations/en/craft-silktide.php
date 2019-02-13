@@ -24,7 +24,7 @@ return [
     'Silktide Craft plugin loaded' => 'Silktide Craft plugin loaded',
     'Please enter the API key provided by <a href="https://www.silktide.com">Silktide</a>.' => 'Please enter the API key provided by <a href="https://www.silktide.com">Silktide</a>.',
     'Sorry, that API key was invalid. It must be a 32 character long code from Silktide.' => 'Sorry, that API key was invalid. It must be a 32 character long code from Silktide.',
-    'For guidance, please see the <a href="https://support.silktide.com/glossary/cms-install-craft3-guide/">Silktide Craft CMS installation guide</a>.' => 'For guidance, please see the <a href="https://support.silktide.com/glossary/cms-install-craft3-guide/">Silktide Craft CMS installation guide</a>.',
+    'For guidance, please see the <a href="https://support.silktide.com/guides/cms-install-craft3-guide/">Silktide Craft CMS installation guide</a>.' => 'For guidance, please see the <a href="https://support.silktide.com/guides/cms-install-craft3-guide/">Silktide Craft CMS installation guide</a>.',
     'The API key provided by Silktide.' => 'The API key provided by Silktide.',
     'Notifying Silktide' => 'Notifying Silktide',
     'Notifying Silktide about a change to URLs {urls}' => 'Notifying Silktide about a change to URLs {urls}',
